@@ -1,0 +1,47 @@
+# Getting and Cleaning Data Code Book
+
+## Raw Data
+
+The raw data used in this program is available at: <http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones>
+
+This data was stored in a folder named 'UCI HAR Dataset' in my working directory.
+
+This folder contained 2 sub-folders and 4 text files:
+
+-   test (folder)
+-   train (folder)
+-   activity_labels.txt
+-   features.txt
+-   README.txt
+
+The 'test' folder contained a further sub-folder and 3 text files: Inertial Signals (folder), subject_test.txt, X_test.txt, y_test.txt
+
+The train folder also contained a sub-folder and 3 text files: - Inertial Signals (folder) - subject_train.txt, X_train.txt, y_train.txt
+
+## Variables
+
+A description of all variables, their characteristics and function within the program is described below.
+
+The following variables directly store data from the various text files downloaded from the 'UCI HAR Dataset' folder:
+
+-   activity_labels (from: 'activity_labels.txt, contains: 6 rows, 2 columns)
+-   features (from: 'features.txt, contains: 561 rows, 2 columns)
+-   test_subject (from: 'subject_test.txt, contains: 2947 rows, 1 column)
+-   test_x (from: 'X_test.txt, contains: 2947 rows, 561 columns)
+-   test_y (from: 'y_test.txt, contains: 2947 rows, 1 column)
+-   train_subject (from: 'subject_train.txt, contains: 7352 rows, 1 column)
+-   train_x (from: 'X_train.txt, contains: 7352 rows, 561 columns)
+-   train_y (from: 'y_train.txt, contains: 7352 rows, 1 column)
+
+The following variables store data merged from previous variables as a singular, tidy data set is sought. This includes combining X data, Y data and Subject data from both train and test sets:
+
+-   x_combined (10299 rows, 561 columns)
+-   y_combined (10299 rows, 1 column)
+-   Subject_combined (10299 rows, 1 column)
+
+The following variables were used to 'extract only the mean and standard deviation for each measurement' and create a final tidy dataset.
+
+-   x (10299 rows, 66 columns)
+-   combined_dataset (10299 rows, 68 columns)
+-   reshape_dataset (6797734 rows, 4 columns)
+-   tidy_dataset (180 rows, 68 columns)
